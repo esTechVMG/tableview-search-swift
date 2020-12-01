@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x3w-bP-7lh">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LWp-6j-fjK">
+            <objects>
+                <navigationController id="x3w-bP-7lh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CL4-WY-VX9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1LR-S0-AKx" kind="relationship" relationship="rootViewController" id="SME-a3-agq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJq-yY-s9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="135"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XGX-XJ-Nb9">
+            <objects>
+                <viewController id="1LR-S0-AKx" customClass="ViewController" customModule="tableview_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n0Q-QR-jkQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0xj-Ln-1fh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaciudad" rowHeight="225" id="P9X-po-Vic" customClass="celda" customModule="tableview_swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="225"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P9X-po-Vic" id="SWT-1g-a2Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Madrid" translatesAutoresizingMaskIntoConstraints="NO" id="CxP-9g-eD0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7a-DR-NNC">
+                                                    <rect key="frame" x="150" y="85.5" width="114.5" height="54"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="3" height="-1"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="E7a-DR-NNC" firstAttribute="centerX" secondItem="SWT-1g-a2Y" secondAttribute="centerX" id="SaL-Oh-64f"/>
+                                                <constraint firstItem="E7a-DR-NNC" firstAttribute="centerY" secondItem="SWT-1g-a2Y" secondAttribute="centerY" id="tTL-WV-fbp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagen" destination="CxP-9g-eD0" id="Iys-gb-BV4"/>
+                                            <outlet property="label" destination="E7a-DR-NNC" id="u6X-8T-OdP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ykl-yT-Jxe"/>
+                        <color key="backgroundColor" red="0.78523804090000004" green="1" blue="0.28192963339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0xj-Ln-1fh" firstAttribute="trailing" secondItem="Ykl-yT-Jxe" secondAttribute="trailing" id="A8d-Wx-r4P"/>
+                            <constraint firstAttribute="bottom" secondItem="0xj-Ln-1fh" secondAttribute="bottom" id="CUE-pg-zkD"/>
+                            <constraint firstItem="0xj-Ln-1fh" firstAttribute="leading" secondItem="Ykl-yT-Jxe" secondAttribute="leading" id="DLl-P1-ael"/>
+                            <constraint firstItem="0xj-Ln-1fh" firstAttribute="top" secondItem="Ykl-yT-Jxe" secondAttribute="top" id="RX3-iP-SVQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UHv-Ki-CgN">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="nYa-2h-6Oh">
+                            <connections>
+                                <action selector="shareButton:" destination="1LR-S0-AKx" id="WNv-hC-uzq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareButton" destination="nYa-2h-6Oh" id="mws-M5-AcQ"/>
+                        <outlet property="tabla" destination="0xj-Ln-1fh" id="92w-4Y-JVm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qak-Vy-Dd2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705.7971014492755" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Madrid" width="341" height="256"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
